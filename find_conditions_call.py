@@ -19,5 +19,5 @@ def find_conditions(practice_id, department_id, patient_id):
     response = requests.request("GET", url, headers=headers, data=payload)
     json_object = json.loads(response.text)
     json_formatted_str = json.dumps(json_object, indent=2)
-    print(json_formatted_str)
+    #print(json_formatted_str)
     return json_formatted_str
