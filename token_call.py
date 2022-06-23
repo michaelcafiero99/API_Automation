@@ -31,9 +31,12 @@ def new_token(connection):
     now_string = now.strftime("%Y-%m-%d %H:%M:%S")
     expiration = now + timedelta(hours=1)
     expiration_string = expiration.strftime("%Y-%m-%d %H:%M:%S")
+    q1 = """DELETE FROM SpeakIT.tokens;"""
+    results = execute_query(connection, q1)
+    print(results)
     q2 = """INSERT
            INTO SpeakIT.tokens (token_id, creation_time,expiration_time,token_content)
-           VALUES(4,""" + "'" + now_string + "'" + "," + "'" + expiration_string + "'" + "," + "'" + auth_string + "'" + ")"""
+           VALUES(5,""" + "'" + now_string + "'" + "," + "'" + expiration_string + "'" + "," + "'" + auth_string + "'" + ")"""
     results = execute_query(connection, q2)
     #print(results)
     q3 = "SELECT * FROM SpeakIT.tokens;"
@@ -63,8 +66,11 @@ def get_token():
 
     q3 = "SELECT * FROM SpeakIT.tokens;"
     results2 = read_query(connection, q3)
+    print(results2)
     auth_string = ((results2[0])[3])
     print(auth_string)
     return auth_string
+get_token()
+
 
 

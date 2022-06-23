@@ -35,8 +35,9 @@ def compile_info(patient_id, practice_id, department_id, test, futuresubmitdate,
     # patient_info1 = patient_info(practice_id, department_id, patient_id)
     patient_info = json.loads(patient_info_call.patient_info(practice_id, department_id, patient_id))
     patient_conditions = json.loads(find_conditions(practice_id, department_id, patient_id))
-    #  get all active conditions, and patient location.
-
+    #  get all activ1
+    # conditions, and patient location.
+    print(patient_info)
     json1 = json.dumps((patient_info['entry']), sort_keys=True, indent=4)
     dict2 = json.loads(json1)
     address_info = (((dict2[0])['resource'])['address'])[0]
