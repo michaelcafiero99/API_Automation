@@ -7,6 +7,7 @@
 
 
 
-#SpeakIT API Automation
-This program provides an end-to-end API client for a sample patient, which calls APIs for all necessary information to place an order, parses the output, and executes the order. 
+## Description
+
+This project is written is Python, and includes an API client for the Athena Electronic Health Record, as well as endpoints of Google Maps API and others. The script integrates with Athena to collect patient information, and then uses this information to make intelligent decisions to automate tasks in the EHR based on the patient's attributes. 
 
