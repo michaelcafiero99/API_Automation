@@ -16,4 +16,4 @@ This project is written is Python, and includes an API client for the Athena Ele
 * Python
 * Postman (for API client construction)
 * SQL
-* OAuth 2.0
+* Requests and OAuth 2.0
